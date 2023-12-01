@@ -124,7 +124,7 @@ pipeline {
             steps {
                 sh '''
             cd $WORKSPACE/weatherapp/UI
-            docker build -t devopseasylearning/weatherapp-ui:${BUILD_NUMBER} .
+            docker build -t engaston/weatherapp-ui:${BUILD_NUMBER} .
                 '''
             }
         }
@@ -135,7 +135,7 @@ pipeline {
             }
             steps {
                 sh '''
-             docker push devopseasylearning/weatherapp-ui:${BUILD_NUMBER}
+             docker push engaston/weatherapp-ui:${BUILD_NUMBER}
                 '''
             }
         }
@@ -143,7 +143,7 @@ pipeline {
             steps {
                 sh '''
             cd $WORKSPACE/weatherapp/weather
-            docker build -t devopseasylearning/weatherapp-weather:${BUILD_NUMBER} .
+            docker build -t engaston/weatherapp-weather:${BUILD_NUMBER} .
                 '''
             }
         }
@@ -154,7 +154,7 @@ pipeline {
             }
             steps {
                 sh '''
-             docker push devopseasylearning/weatherapp-weather:${BUILD_NUMBER}
+             docker push engaston/weatherapp-weather:${BUILD_NUMBER}
                 '''
             }
         }
@@ -162,7 +162,7 @@ pipeline {
             steps {
                 sh '''
             cd $WORKSPACE/weatherapp/redis
-            docker build -t devopseasylearning/weatherapp-redis:${BUILD_NUMBER} .
+            docker build -t engaston/weatherapp-redis:${BUILD_NUMBER} .
                 '''
             }
         }
@@ -174,7 +174,7 @@ pipeline {
             }
             steps {
                 sh '''
-             docker push devopseasylearning/weatherapp-redis:${BUILD_NUMBER}
+             docker push engaston/weatherapp-redis:${BUILD_NUMBER}
                 '''
             }
         }
@@ -182,7 +182,7 @@ pipeline {
             steps {
                 sh '''
             cd $WORKSPACE/weatherapp/db
-            docker build -t devopseasylearning/weatherapp-db:${BUILD_NUMBER} .
+            docker build -t engaston/weatherapp-db:${BUILD_NUMBER} .
                 '''
             }
         }
@@ -194,7 +194,7 @@ pipeline {
             }
             steps {
                 sh '''
-             docker push devopseasylearning/weatherapp-db:${BUILD_NUMBER}
+             docker push engaston/weatherapp-db:${BUILD_NUMBER}
                 '''
             }
         }
